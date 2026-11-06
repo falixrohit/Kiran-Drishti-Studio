@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#100d09">
+  <meta name="description" content="Kiran Drishti Studio — photography, cinematography, drone films and creative production.">
+  <title>Kiran Drishti Studio | Stories in Every Frame</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#100d09;--panel:#19140e;--panel2:#211a11;--gold:#e8bd68;--gold2:#fff0bd;--muted:#b8aa92;--line:rgba(232,189,104,.2);--white:#fffaf0}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 80% 0%,#49351a 0,transparent 32%),radial-gradient(ellipse at 0% 40%,#2b2113 0,transparent 28%),var(--bg);color:var(--white);font-family:"Manrope",sans-serif}
+    a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}
+    .topbar{position:sticky;top:0;z-index:20;background:rgba(16,13,9,.86);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+    nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:22px}.brand{font-family:"Cinzel",serif;font-size:24px;letter-spacing:2.5px;background:linear-gradient(110deg,#fff3c8,#d9a94e,#fff0bd);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:700}.brand small{display:block;font:9px "Manrope";letter-spacing:4px;color:var(--muted);text-align:center;margin-top:2px}
+    .navlinks{display:flex;gap:24px;color:#e6dac4;font-size:13px}.navlinks a:hover{color:var(--gold2)}.menu{display:none;background:none;border:1px solid var(--line);color:var(--gold2);padding:8px 12px;border-radius:10px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 20px;border-radius:999px;border:1px solid transparent;background:linear-gradient(115deg,#f7dda0,#c58d35,#f5d88f);color:#201508;font-weight:700;font-size:13px;box-shadow:0 8px 28px #d29a3b25;cursor:pointer;transition:.2s}.btn:hover{transform:translateY(-2px);filter:brightness(1.08)}.btn.ghost{background:transparent;color:var(--gold2);border-color:var(--line);box-shadow:none}
+    .hero{min-height:650px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:42px;padding:75px 0}.eyebrow{color:var(--gold);letter-spacing:4px;text-transform:uppercase;font-size:10px;font-weight:700}.hero h1{font:600 clamp(54px,7.5vw,90px)/.98 "Cormorant Garamond",serif;letter-spacing:-1.5px;margin:18px 0;background:linear-gradient(120deg,#fff8df 10%,#e8bd68 55%,#fff0bd);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{max-width:520px;color:var(--muted);line-height:1.8;font-size:15px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.hero-art{height:490px;border:1px solid var(--line);border-radius:180px 180px 22px 22px;overflow:hidden;position:relative;box-shadow:0 25px 80px #0009}.hero-art img{width:100%;height:100%;object-fit:cover;filter:saturate(.8)}.hero-art:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#160f08a8,transparent 65%),linear-gradient(120deg,#f0c87524,transparent 45%)}
+    section{padding:82px 0}.section-head{text-align:center;max-width:660px;margin:0 auto 38px}.section-head h2{font:600 clamp(38px,5vw,54px) "Cormorant Garamond",serif;letter-spacing:.2px;margin:12px 0;background:linear-gradient(110deg,#fff3c8,#d6a44c,#fff0bd);-webkit-background-clip:text;background-clip:text;color:transparent}.section-head p{color:var(--muted);line-height:1.7;font-size:14px}
+    .service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.service{padding:23px 19px;background:linear-gradient(145deg,#241b10,#15110c);border:1px solid var(--line);border-radius:17px;min-height:154px;transition:.2s}.service:hover{transform:translateY(-4px);border-color:#e8bd6880}.service .ico{width:76px;height:68px;display:flex;align-items:center;justify-content:flex-start;margin:0 0 4px;background:radial-gradient(ellipse at 40% 65%,rgba(232,189,104,.18),transparent 68%);filter:drop-shadow(0 0 10px rgba(232,189,104,.22))}.service .ico svg{width:68px;height:62px;overflow:visible;fill:url(#goldFill);stroke:url(#goldStroke);stroke-width:1.15;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 5px rgba(255,190,75,.58))}.service:hover .ico{filter:drop-shadow(0 0 16px rgba(255,194,86,.58))}.service:hover .ico svg{transform:translateY(-3px) scale(1.06);transition:transform .25s ease}.service h3{font:600 22px "Cormorant Garamond";margin:14px 0 7px;color:var(--gold2)}.service p{font-size:12px;line-height:1.6;color:var(--muted);margin:0}
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.shot{height:270px;border-radius:16px;overflow:hidden;position:relative;border:1px solid var(--line);background:#241b10}.shot img{width:100%;height:100%;object-fit:cover;transition:.5s}.shot:hover img{transform:scale(1.06)}.shot span{position:absolute;bottom:0;left:0;right:0;padding:30px 17px 16px;background:linear-gradient(transparent,#100d09e8);font:600 22px "Cormorant Garamond"}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch}.panel{background:linear-gradient(145deg,#241b10,#15110c);border:1px solid var(--line);border-radius:22px;padding:30px}.panel h3{font:600 31px "Cormorant Garamond";color:var(--gold2);margin:0 0 10px}.panel p{color:var(--muted);line-height:1.7;font-size:13px}
+    form{display:grid;gap:13px}.fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{display:grid;gap:7px}.field label{font-size:11px;color:var(--gold2);letter-spacing:.5px}.field input,.field select,.field textarea{width:100%;background:#100d09;border:1px solid var(--line);border-radius:10px;color:var(--white);padding:12px;outline:none}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold)}.field textarea{min-height:100px;resize:vertical}.field.full{grid-column:1/-1}.hint{font-size:11px;color:#a99a80;line-height:1.5}
+    .review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.review{padding:22px;border:1px solid var(--line);border-radius:16px;background:#1b150e}.stars{color:var(--gold);letter-spacing:3px}.review p{color:#d4c7b1;font-size:13px;line-height:1.7}.review strong{font-size:12px;color:var(--gold2)}.review-form{max-width:650px;margin:30px auto 0}
+    .donate{background:linear-gradient(115deg,#3a2912,#1b140c 50%,#34230e);border:1px solid #d9a94e66;border-radius:24px;padding:42px;text-align:center}.donate h2{font:clamp(32px,5vw,46px) "Cormorant Garamond";color:var(--gold2);margin:10px}.donate p{color:#d1c2a7;max-width:650px;margin:12px auto 22px;line-height:1.7;font-size:14px}.amounts{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:22px 0}.amount{padding:10px 18px;border-radius:30px;border:1px solid var(--line);background:#100d09;color:var(--gold2);cursor:pointer}.amount.active{background:linear-gradient(110deg,#f7dda0,#c58d35);color:#201508}.footer{border-top:1px solid var(--line);padding:35px 0;color:var(--muted);font-size:12px}.footrow{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);padding:13px 18px;background:#f2d18a;color:#1b1207;border-radius:12px;font-size:13px;font-weight:700;display:none;z-index:50;max-width:90%;text-align:center}
+    @media(max-width:850px){.navlinks{display:none;position:absolute;top:76px;left:0;right:0;background:#15110c;padding:20px;flex-direction:column;border-bottom:1px solid var(--line)}.navlinks.open{display:flex}.menu{display:block}.nav-cta{display:none}.hero{grid-template-columns:1fr;padding:55px 0}.hero-art{height:380px;max-width:540px;width:100%;margin:auto}.service-grid{grid-template-columns:repeat(2,1fr)}.split{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(2,1fr)}.review-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:520px){.wrap{width:min(100% - 28px,1160px)}nav{height:68px}.brand{font-size:22px}.hero{min-height:unset}.hero-art{height:320px}.service-grid{gap:9px}.service{padding:17px 14px;min-height:145px}.gallery{grid-template-columns:1fr 1fr;gap:9px}.shot{height:190px}.review-grid{grid-template-columns:1fr}.fields{grid-template-columns:1fr}.field.full{grid-column:auto}.panel{padding:21px}.donate{padding:28px 18px}section{padding:62px 0}}
+
+
+  </style>
+</head>
+<body>
+<svg aria-hidden="true" width="0" height="0" style="position:absolute"><defs><linearGradient id="goldStroke" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff8d9"/><stop offset=".42" stop-color="#f4c45e"/><stop offset="1" stop-color="#8d5418"/></linearGradient><linearGradient id="goldFill" x1="0" y1="0" x2=".9" y2="1"><stop offset="0" stop-color="#fff4c4"/><stop offset=".35" stop-color="#e9b44d"/><stop offset=".72" stop-color="#9b5e19"/><stop offset="1" stop-color="#3a210b"/></linearGradient></defs></svg>
+<header class="topbar"><div class="wrap"><nav>
+  <a class="brand" href="#home">KIRAN DRISHTI<small>STUDIO · PHOTOGRAPHY & FILMS</small></a>
+  <div class="navlinks" id="navlinks"><a href="#services">Services</a><a href="#portfolio">Portfolio</a><a href="#booking">Request a Shoot</a><a href="#reviews">Reviews</a><a href="#donate">Support Us</a><a href="#contact">Contact</a></div>
+  <a class="btn nav-cta" href="#booking">Book a Shoot ↗</a><button class="menu" id="menuBtn" aria-label="Open menu">☰</button>
+</nav></div></header>
+<main>
+<section class="wrap hero" id="home">
+  <div><div class="eyebrow">Photography · Films · Aerial</div><h1>Stories in<br>Every Frame.</h1><p>We turn meaningful moments into timeless visuals. From elegant photography and cinematic films to breathtaking drone perspectives, let's create something unforgettable.</p><div class="actions"><a class="btn" href="#booking">Request a Shoot ↗</a><a class="btn ghost" href="#portfolio">Explore Portfolio</a></div></div>
+  <div class="hero-art"><img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1800&q=95" alt="Professional camera and photography setup"></div>
+</section>
+<section id="services"><div class="wrap"><div class="section-head"><div class="eyebrow">What we create</div><h2>Our Creative Services</h2><p>Choose a service that matches your vision. Custom packages are available for personal, business and special-event projects.</p></div>
+<div class="service-grid">
+  <article class="service"><div class="ico"><svg viewBox="0 0 80 68" aria-hidden="true"><path d="M9 21h15l6-9h21l7 9h13q4 0 4 4v28q0 4-4 4H9q-4 0-4-4V25q0-4 4-4Z"/><path d="M30 12 27 21h28l-4-9" fill="#f6d47c"/><circle cx="42" cy="37" r="16" fill="#24170b"/><circle cx="42" cy="37" r="11" fill="url(#goldFill)"/><circle cx="42" cy="37" r="6" fill="#17100a"/><path d="M38 31q7-5 11 2" fill="none" stroke="#fff0b3" stroke-width="2"/><circle cx="16" cy="29" r="2" fill="#fff2bc"/><path d="M5 62q34 9 70 0" fill="none"/></svg></div><h3>Photography</h3><p>Portrait, wedding, fashion, product, event, birthday, maternity and lifestyle photography.</p></article>
+  <article class="service"><div class="ico"><svg viewBox="0 0 80 68" aria-hidden="true"><path d="M10 23 62 9l8 9-52 15z"/><path d="M14 34 66 20v28L14 62z"/><path d="m14 34 52-14M14 44l52-14M14 54l52-14" fill="none" stroke="#fff0bd" stroke-width="2"/><path d="m20 25 7 8m7-12 7 8m7-12 7 8" fill="none" stroke="#2c1a08" stroke-width="3"/><circle cx="59" cy="51" r="12" fill="#261707"/><circle cx="59" cy="51" r="7" fill="none" stroke="#f5d17a" stroke-width="2"/><circle cx="59" cy="51" r="2" fill="#f5d17a"/><path d="M8 64h64" fill="none"/></svg></div><h3>Cinematography</h3><p>Wedding films, cinematic videos, music videos, commercials, travel films and event coverage.</p></article>
+  <article class="service"><div class="ico"><svg viewBox="0 0 80 68" aria-hidden="true"><path d="M29 27 40 20l11 7-4 13H33z"/><path d="M40 20V9m-4 11 4-11 4 11" fill="none"/><path d="M29 27 15 17 7 19l13 14m31-6 14-10 8 2-13 14"/><path d="M33 40 21 52l-8 1 8-15m27 2 12 14 8 1-8-15"/><circle cx="40" cy="36" r="5" fill="#241507"/><path d="M5 15h13m44 0h13M8 55h12m40 0h12" fill="none" stroke="#f5d17a" stroke-width="2"/></svg></div><h3>Drone Services</h3><p>Aerial photography, cinematic drone footage, wedding aerials and property visuals.</p></article>
+  <article class="service"><div class="ico"><svg viewBox="0 0 80 68" aria-hidden="true"><rect x="7" y="8" width="48" height="37" rx="4"/><path d="M14 15h34v23H14z" fill="#251606"/><path d="m26 19 15 8-15 8z" fill="#fff0bd"/><path d="M17 51h29l6 6H11z"/><circle cx="62" cy="48" r="12" fill="#241707"/><circle cx="62" cy="48" r="7" fill="none" stroke="#f5d17a" stroke-width="2"/><path d="M62 41v14m-7-7h14" fill="none" stroke="#f5d17a"/></svg></div><h3>Editing & Retouching</h3><p>Photo retouching, color grading, video editing, reels, highlight films and albums.</p></article>
+  <article class="service"><div class="ico"><svg viewBox="0 0 80 68" aria-hidden="true"><path d="M40 7 48 22 65 25 53 38 56 57 40 48 24 57 27 38 15 25 32 22z"/><path d="M40 13 45 26 59 28 49 38 51 51 40 44 29 51 31 38 21 28 35 26z" fill="#2b1908"/><path d="M40 16 44 28 56 29 47 37 49 49 40 43 31 49 33 37 24 29 36 28z" fill="url(#goldFill)"/><circle cx="40" cy="34" r="5" fill="#fff0bd"/><path d="M9 61q31 7 62 0" fill="none"/></svg></div><h3>Wedding Stories</h3><p>Pre-wedding shoots, wedding day coverage, candid moments and highlight films.</p></article>
+  <article class="service"><div class="ico"><svg viewBox="0 0 80 68" aria-hidden="true"><path d="M9 59V23l15-11 15 11v36zM39 59V31l15-9 17 9v28z"/><path d="M16 29h5m8 0h5M16 39h5m8 0h5M16 49h5m8 0h5M47 36h5m8 0h5M47 47h5m8 0h5" fill="none" stroke="#2c1a08" stroke-width="3"/><path d="M5 61h70" fill="none"/><path d="M24 12V5m-4 4h8" fill="none" stroke="#fff0bd" stroke-width="2"/></svg></div><h3>Brand & Business</h3><p>Product shoots, real-estate visuals, brand campaigns and promotional content.</p></article>
+  <article class="service"><div class="ico"><svg viewBox="0 0 80 68" aria-hidden="true"><path d="m5 56 19-27 11 14 9-12 30 25z"/><path d="m24 29 7 9 4 5 9-12 8 10 8-7 14 22H5z" fill="url(#goldFill)"/><path d="m5 56 19-27 11 14 9-12 30 25" fill="none" stroke="#fff0bd" stroke-width="2"/><path d="m18 38 6-9 5 7m20 2 4-7 8 10" fill="none" stroke="#fff5d0" stroke-width="2"/><path d="M9 62h62" fill="none"/></svg></div><h3>Travel & Nature</h3><p>Landscape photography, travel documentaries and outdoor cinematic experiences.</p></article>
+  <article class="service"><div class="ico"><svg viewBox="0 0 80 68" aria-hidden="true"><rect x="26" y="5" width="28" height="55" rx="6"/><rect x="30" y="11" width="20" height="36" rx="2" fill="#261707"/><path d="M35 53h10" fill="none" stroke="#fff0bd" stroke-width="2"/><path d="m40 17 5 5-5 5-5-5z"/><path d="M18 22q-8-7-10 2 2 8 10 7m44-9q8-7 10 2-2 8-10 7" fill="none" stroke="#f5d17a" stroke-width="2"/><path d="M14 42q-7 6-1 11 6 2 9-4m36-7q7 6 1 11-6 2-9-4" fill="none" stroke="#f5d17a" stroke-width="2"/></svg></div><h3>Social Content</h3><p>Instagram reels, creator content, event recaps and short-form video production.</p></article>
+</div></div></section>
+<section id="portfolio"><div class="wrap"><div class="section-head"><div class="eyebrow">Selected work</div><h2>Visual Highlights</h2><p>A preview of the moments and styles we love to capture. Replace these sample images with your own work before launch.</p></div>
+<div class="gallery">
+  <div class="shot"><img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=1400&q=92" alt="Wedding photography"><span>Wedding Stories</span></div>
+  <div class="shot"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1400&q=92" alt="Portrait photography"><span>Portraits</span></div>
+  <div class="shot"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=92" alt="Landscape photography"><span>Travel & Nature</span></div>
+  <div class="shot"><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1400&q=92" alt="Event photography"><span>Events</span></div>
+  <div class="shot"><img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1400&q=92" alt="Fashion photography"><span>Fashion</span></div>
+  <div class="shot"><img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=1400&q=92" alt="Cinematic landscape"><span>Cinematic Frames</span></div>
+</div></div></section>
+<section id="booking"><div class="wrap"><div class="section-head"><div class="eyebrow">Let's plan your shoot</div><h2>Request a Booking</h2><p>Tell us what you have in mind. We'll follow up to discuss availability, location and a suitable package.</p></div>
+<div class="split"><div class="panel"><h3>Your vision, our lens.</h3><p>Every project is different. Share the details and we'll help shape the right photography or film experience.</p><p>✦ Custom packages<br>✦ Personal and commercial projects<br>✦ Indoor and outdoor shoots<br>✦ Photography, video and drone options</p><p class="hint">Booking requests are sent securely to the studio through Formspree.</p></div>
+<form class="panel" id="bookingForm" action="https://formspree.io/f/mrppvepl" method="POST">
+  <input type="hidden" name="_subject" value="New booking request — Kiran Drishti Studio">
+  <div class="fields"><div class="field"><label>YOUR NAME *</label><input name="name" required placeholder="Full name"></div><div class="field"><label>EMAIL *</label><input name="email" type="email" required placeholder="you@example.com"></div>
+  <div class="field"><label>PHONE / WHATSAPP</label><input name="phone" placeholder="+91"></div><div class="field"><label>SERVICE *</label><select name="service" required><option value="">Choose a service</option><option>Portrait Photography</option><option>Wedding Photography</option><option>Pre-wedding Photography</option><option>Fashion Photography</option><option>Product Photography</option><option>Event Photography</option><option>Birthday / Maternity Photography</option><option>Cinematography / Wedding Film</option><option>Music / Commercial Video</option><option>Drone Photography</option><option>Drone Cinematography</option><option>Video Editing / Reels</option><option>Photo Editing / Retouching</option><option>Other / Custom Request</option></select></div>
+  <div class="field"><label>PREFERRED DATE</label><input name="date" type="date"></div><div class="field"><label>LOCATION</label><input name="location" placeholder="City / venue"></div>
+  <div class="field full"><label>PROJECT DETAILS</label><textarea name="details" placeholder="Tell us about your idea, event, duration or special requirements..."></textarea></div></div>
+  <button class="btn" type="submit">Send Request ↗</button><div class="hint">Please don't include sensitive personal or payment information.</div>
+</form></div></div></section>
+<section id="reviews"><div class="wrap"><div class="section-head"><div class="eyebrow">Kind words</div><h2>Client Reviews</h2><p>Feedback helps us improve and helps future clients know what to expect.</p></div>
+<div class="review-grid" id="reviewList">
+  <article class="review"><div class="stars">★★★★★</div><p>“Beautiful moments captured with care. The whole experience felt thoughtful and professional.”</p><strong>Sample client review</strong></article>
+  <article class="review"><div class="stars">★★★★★</div><p>“Loved the cinematic feel and attention to detail. The final visuals were wonderful.”</p><strong>Sample client review</strong></article>
+  <article class="review"><div class="stars">★★★★★</div><p>“Friendly communication and a creative approach from planning to delivery.”</p><strong>Sample client review</strong></article>
+</div>
+<form class="panel review-form" id="reviewForm"><h3>Leave a Review</h3><div class="fields"><div class="field"><label>YOUR NAME</label><input name="reviewer" required placeholder="Your name"></div><div class="field"><label>RATING</label><select name="rating"><option value="5">★★★★★ — Excellent</option><option value="4">★★★★ — Very good</option><option value="3">★★★ — Good</option><option value="2">★★ — Fair</option><option value="1">★ — Needs improvement</option></select></div><div class="field full"><label>YOUR EXPERIENCE</label><textarea name="comment" required placeholder="Write your review..." maxlength="500"></textarea></div></div><button class="btn" type="submit">Submit Review ↗</button><div class="hint">Starter version: reviews are stored in this browser and are not publicly shared or verified. A live public review system needs a database and moderation.</div></form>
+</div></section>
+<section id="donate"><div class="wrap"><div class="donate"><div class="eyebrow">Support independent creativity</div><h2>Help Us Create More.</h2><p>If you enjoy our work and want to support future creative projects, you can make a voluntary contribution. Donations are optional and do not guarantee a service or booking.</p>
+<div class="amounts"><button class="amount active" data-amount="100">₹100</button><button class="amount" data-amount="250">₹250</button><button class="amount" data-amount="500">₹500</button><button class="amount" data-amount="1000">₹1,000</button></div>
+<a class="btn" id="donateBtn" href="#contact">Support Kiran Drishti Studio ↗</a><p class="hint">Donation checkout is not connected yet. Add your verified UPI ID or a trusted payment-provider link before accepting contributions. Never publish private banking details.</p>
+</div></div></section>
+<section id="contact"><div class="wrap"><div class="section-head"><div class="eyebrow">Get in touch</div><h2>Let's Make Something Timeless</h2><p>Have a question, a collaboration idea or a custom project? Reach out and let's talk.</p></div>
+<div class="split"><div class="panel"><h3>Contact Kiran Drishti Studio</h3><p>📍 Location: Jammu & Kashmir, India</p><p>✉ Email: <a href="mailto:rajkumarsharma16111985@gmail.com">rajkumarsharma16111985@gmail.com</a></p><p>☎ Phone / WhatsApp: <a href="tel:+919596722064">9596722064</a> · <a href="tel:+917006438737">7006438737</a></p><p>◎ Instagram: <a href="https://www.instagram.com/kirandrishtistudio/" target="_blank" rel="noopener noreferrer">@kirandrishtistudio ↗</a></p></div><div class="panel"><h3>Ready when you are.</h3><p>For the fastest response, submit the booking request with your preferred date and project details, or call us at 9596722064 / 7006438737. We'll use that information to plan the next steps.</p><a class="btn" href="#booking">Start a Request ↗</a></div></div></div></section>
+</main>
+<footer class="footer"><div class="wrap footrow"><div><span class="brand">KIRAN DRISHTI</span><div>Photography · Cinematography · Drone Films</div></div><div>© <span id="year"></span> Kiran Drishti Studio. All rights reserved.</div><div style="display:flex;gap:16px;align-items:center"><a href="#home">Back to top ↑</a></div></div></footer>
+
+<div class="toast" id="toast" role="status"></div>
+<script>
+  const $=s=>document.querySelector(s);
+  $('#year').textContent=new Date().getFullYear();
+  $('#menuBtn').addEventListener('click',()=>$('#navlinks').classList.toggle('open'));
+  document.querySelectorAll('#navlinks a').forEach(a=>a.addEventListener('click',()=>$('#navlinks').classList.remove('open')));
+  function toast(msg){const t=$('#toast');t.textContent=msg;t.style.display='block';setTimeout(()=>t.style.display='none',3200)}
+  function save(key,item){const arr=JSON.parse(localStorage.getItem(key)||'[]');arr.push(item);localStorage.setItem(key,JSON.stringify(arr))}
+  $('#bookingForm').addEventListener('submit',async e=>{
+    e.preventDefault();
+    const form=e.currentTarget,button=form.querySelector('button[type="submit"]');
+    const originalText=button.textContent;
+    button.disabled=true;button.textContent='Sending…';
+    try{
+      const response=await fetch(form.action,{
+        method:'POST',
+        body:new FormData(form),
+        headers:{'Accept':'application/json'}
+      });
+      const result=await response.json().catch(()=>({}));
+      if(!response.ok) throw new Error(result.error||'Submission failed');
+      form.reset();
+      toast('Your booking request has been sent! The studio will contact you soon.');
+    }catch(err){
+      toast('Could not send your request. Please try again or contact the studio directly.');
+    }finally{
+      button.disabled=false;button.textContent=originalText;
+    }
+  });
+  const list=$('#reviewList');
+  function renderReview(r){const el=document.createElement('article');el.className='review';const stars=document.createElement('div');stars.className='stars';stars.textContent='★'.repeat(Number(r.rating))+'☆'.repeat(5-Number(r.rating));const p=document.createElement('p');p.textContent='“'+r.comment+'”';const strong=document.createElement('strong');strong.textContent=r.reviewer+' · Customer review';el.append(stars,p,strong);list.prepend(el)}
+  $('#reviewForm').addEventListener('submit',e=>{e.preventDefault();const d=Object.fromEntries(new FormData(e.target).entries());save('lords_reviews',d);renderReview(d);e.target.reset();toast('Thanks! Your review is saved in this browser.')});
+  (JSON.parse(localStorage.getItem('lords_reviews')||'[]')).forEach(renderReview);
+  let donation=100;document.querySelectorAll('.amount').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.amount').forEach(x=>x.classList.remove('active'));b.classList.add('active');donation=b.dataset.amount;$('#donateBtn').textContent='Support with ₹'+donation+' ↗'}));
+  $('#donateBtn').addEventListener('click',e=>{e.preventDefault();toast('Add your verified UPI ID or payment-provider checkout link to activate donations.')});
+
+
+
+</script>
+</body></html>
